@@ -2,11 +2,27 @@ import { render, screen } from '@testing-library/react';
 import { Greet } from './greet';
 
 
-test('Greet Renders Correctly', () => {
-    //the virtual DOm
+// test('Greet Renders Correctly', () => {
+//     //the virtual DOm
+//     render(<Greet />)
+//     //the regex /hello/ to display event if its in small caps
+//     const testElement = screen.getByText(/hello/i)
+//     expect(testElement).toBeInTheDocument()
+
+// }) 
+// TDD
+// Greet should render the text hello and if
+//  name is passed into the component it should render hello follwed by the name
+
+test('Greet renders correctly', () => {
     render(<Greet />)
-    //the regex /hello/ to display event if its in small caps
-    const testElement = screen.getByText(/hello/i)
+    const testElement = screen.getByText('Hello')
     expect(testElement).toBeInTheDocument()
 
-}) 
+})
+test('Greet renders with a name',()=>{
+    render(<Greet name='carol' />)
+    const testElement=screen.getByText('Hello carol')
+    expect(testElement).toBeInTheDocument()
+
+})
