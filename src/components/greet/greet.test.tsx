@@ -13,16 +13,32 @@ import { Greet } from './greet';
 // TDD
 // Greet should render the text hello and if
 //  name is passed into the component it should render hello follwed by the name
+describe('Greet', () => {
+    test(' renders correctly', () => {
+        render(<Greet />)
+        const testElement = screen.getByText('Hello')
+        expect(testElement).toBeInTheDocument()
 
-test('Greet renders correctly', () => {
-    render(<Greet />)
-    const testElement = screen.getByText('Hello')
-    expect(testElement).toBeInTheDocument()
+    })
+    describe('Nested', () => {
+        test('Greet renders with a name', () => {
+            render(<Greet name='carol' />)
+            const testElement = screen.getByText('Hello carol')
+            expect(testElement).toBeInTheDocument()
+
+        })
+
+    })
+
+
 
 })
-test('Greet renders with a name',()=>{
-    render(<Greet name='carol' />)
-    const testElement=screen.getByText('Hello carol')
-    expect(testElement).toBeInTheDocument()
+//multiple Nested GRoups
+describe('Nested', () => {
+    test('Greet renders with a name', () => {
+        render(<Greet name='carol' />)
+        const testElement = screen.getByText('Hello carol')
+        expect(testElement).toBeInTheDocument()
 
+    })
 })
