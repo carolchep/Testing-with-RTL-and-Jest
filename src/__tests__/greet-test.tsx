@@ -35,7 +35,7 @@ describe('Greet', () => {
 
 })
 //multiple Nested GRoups
-//you can use .only or skip with describe too
+//you can use .only or skip with describe tooadd 
 describe('Nested', () => {
     it('Greet renders with a name', () => {
         render(<Greet name='carol' />)  
