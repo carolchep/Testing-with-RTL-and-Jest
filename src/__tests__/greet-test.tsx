@@ -1,5 +1,6 @@
+
 import { render, screen } from '@testing-library/react';
-import { Greet } from './greet';
+import { Greet } from '../components/greet/greet';
 
 
 // test('Greet Renders Correctly', () => {
@@ -14,7 +15,7 @@ import { Greet } from './greet';
 // Greet should render the text hello and if
 //  name is passed into the component it should render hello follwed by the name
 describe('Greet', () => {
-    test(' renders correctly', () => {
+    it(' renders correctly', () => {
         render(<Greet />)
         const testElement = screen.getByText('Hello')
         expect(testElement).toBeInTheDocument()
@@ -34,10 +35,10 @@ describe('Greet', () => {
 
 })
 //multiple Nested GRoups
-//you can use .only or skip with describe too
+//you can use .only or skip with describe tooadd 
 describe('Nested', () => {
-    test('Greet renders with a name', () => {
-        render(<Greet name='carol' />)
+    it('Greet renders with a name', () => {
+        render(<Greet name='carol' />)  
         const testElement = screen.getByText('Hello carol')
         expect(testElement).toBeInTheDocument()
 
