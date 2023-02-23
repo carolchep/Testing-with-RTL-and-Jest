@@ -60,10 +60,15 @@ describe('getBylabelText', () => {
         const name = screen.getByDisplayValue("Carol")
         expect(name).toBeInTheDocument()
     })
-    test('getByAltText',()=>{
-        render(<Application/>)
-       // img,input area,customHtml
-        const ImageElement=screen.getByAltText("a person with a laptop")
+    test('getByAltText', () => {
+        render(<Application />)
+        // img,input area,customHtml
+        const ImageElement = screen.getByAltText("a person with a laptop")
         expect(ImageElement).toBeInTheDocument()
+    })
+    test('getByTitle', () => {
+        render(<Application />)
+        const spanTitle = screen.getByTitle("close")
+        expect(spanTitle).toBeInTheDocument()
     })
 })
