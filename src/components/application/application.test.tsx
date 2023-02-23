@@ -29,9 +29,19 @@ describe('Application', () => {
 })
 //other getByRole options are name,level,hidden,selected,pressed
 describe('getBylabelText', () => {
-    test('should getLabelBytEext', () => {
+    test.skip('should getLabelBytEext', () => {
         render(<Application />)
         const nameElement2 = screen.getByLabelText('Name')
         expect(nameElement2).toBeInTheDocument()
+    })
+    test('input with similar label', () => {
+        render(<Application />)
+        const nameElement3 = screen.getByLabelText('Name',{
+            selector :"input"
+        })
+        const nameElement4 = screen.getByLabelText('Name',{
+            selector :"select"
+        })
+        expect(nameElement4).toBeInTheDocument()
     })
 })
