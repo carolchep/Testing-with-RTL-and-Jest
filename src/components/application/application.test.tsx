@@ -36,12 +36,17 @@ describe('getBylabelText', () => {
     })
     test('input with similar label', () => {
         render(<Application />)
-        const nameElement3 = screen.getByLabelText('Name',{
-            selector :"input"
+        const nameElement3 = screen.getByLabelText('Name', {
+            selector: "input"
         })
-        const nameElement4 = screen.getByLabelText('Name',{
-            selector :"select"
+        const nameElement4 = screen.getByLabelText('Name', {
+            selector: "select"
         })
         expect(nameElement4).toBeInTheDocument()
+    })
+    test('getByPlaceHolderText', () => {
+        render(<Application />)
+        const placeholder = screen.getByPlaceholderText("Fullname")
+        expect(placeholder).toBeInTheDocument()
     })
 })

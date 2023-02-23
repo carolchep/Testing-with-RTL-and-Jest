@@ -13,7 +13,7 @@ export const Application = () => {
             <input
               type="text"
               id="name"
-              // placeholder="Fullname"
+              placeholder="Fullname"
               // value="Vishwas"
               // onChange={() => {}}
             />
