@@ -49,4 +49,9 @@ describe('getBylabelText', () => {
         const placeholder = screen.getByPlaceholderText("Fullname")
         expect(placeholder).toBeInTheDocument()
     })
+    test('getByText',()=>{
+        render(<Application/>)
+        const paragraphElement=screen.getByText("All fields are mandatory")
+        expect(paragraphElement).toBeInTheDocument()
+    })
 })
