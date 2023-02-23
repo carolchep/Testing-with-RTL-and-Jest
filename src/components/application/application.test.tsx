@@ -71,4 +71,9 @@ describe('getBylabelText', () => {
         const spanTitle = screen.getByTitle("close")
         expect(spanTitle).toBeInTheDocument()
     })
+    test('getByTestId', () => {
+        render(<Application />)
+        const testId = screen.getByTestId("custom-element")
+        expect(testId).toBeInTheDocument()
+    })
 })
