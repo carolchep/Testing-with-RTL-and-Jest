@@ -51,7 +51,14 @@ describe('getBylabelText', () => {
     })
     test('getByText',()=>{
         render(<Application/>)
+        //getBytText can also take the select option as in getByPlaceHolderText
         const paragraphElement=screen.getByText("All fields are mandatory")
         expect(paragraphElement).toBeInTheDocument()
     })
+    test('getByDisplayValue',()=>{
+        render(<Application/>)
+        const name=screen.getByDisplayValue("Carol")
+        expect(name).toBeInTheDocument()
+    })
+
 })
