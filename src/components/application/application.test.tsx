@@ -1,5 +1,5 @@
 import { Application } from "./application";
-import { getByRole, render, screen } from "@testing-library/react"
+import { getByDisplayValue, getByLabelText, getByPlaceholderText, getByRole, getByText, render, screen } from "@testing-library/react"
 
 describe('Application', () => {
     test('renders correctly', () => {
@@ -77,3 +77,9 @@ describe('getBylabelText', () => {
         expect(testId).toBeInTheDocument()
     })
 })
+//order of queries
+// getByRole
+// getByLabelText getting the label
+// getByPlaceholderText using the placeholder text
+// getByText is useful outside forms
+// getByDisplayValue getting the defualt value
