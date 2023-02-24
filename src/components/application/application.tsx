@@ -100,14 +100,15 @@ export const Application = () => {
       <div><input type="text" data-testid="element-to-focus" /></div>
 
       <form data-testid="login-form">
-        <input type="text" name="username" value="jane.doe"             onChange={() => { }}
-/>
-        <input type="password" name="password" value="12345678"             onChange={() => { }}
-/>
-        <input type="checkbox" name="rememberMe" checked             onChange={() => { }}
- />
+        <input type="text" name="username" value="jane.doe" onChange={() => { }}
+        />
+        <input type="password" name="password" value="12345678" onChange={() => { }}
+        />
+        <input type="checkbox" name="rememberMe" checked onChange={() => { }}
+        />
         <button type="submit">Sign in</button>
       </form>
+      <span data-testid="text-content">Text Content</span>
     </>
   )
 }

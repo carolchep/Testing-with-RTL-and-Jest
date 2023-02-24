@@ -142,6 +142,12 @@ test('to be visible', () => {
         username: 'jane.doe',
         rememberMe: true,
       })
+      const element = screen.getByTestId('text-content')
+
+expect(element).toHaveTextContent('Content')
+expect(element).toHaveTextContent(/^Text Content$/) // to match the whole content
+expect(element).toHaveTextContent(/content$/i) // to use case-insensitive match
+expect(element).not.toHaveTextContent('content')
 
 })
 //order of queries
