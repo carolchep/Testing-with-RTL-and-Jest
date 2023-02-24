@@ -102,9 +102,24 @@ describe('getBylabelText', () => {
         expect(screen.getByTestId('select')).toBeRequired()
         expect(screen.getByTestId('textarea')).toBeRequired()
         expect(screen.getByTestId('supported-role-aria')).toBeRequired()
-    }
+    })
 
-    )
+})
+test('to be visible', () => {
+    render(<Application />)
+    expect(screen.getByText('Visible Example')).toBeVisible()
+    expect(screen.getByText('Hidden Attribute Example')).not.toBeVisible()
+    expect(screen.getByText('Hidden Details Example')).not.toBeVisible()
+    expect(screen.getByText('Visible Details Example')).toBeVisible()
+    // const button = screen.getByTestId('ok-button')
+
+    // expect(button).toHaveAttribute('disabled')
+    // expect(button).toHaveAttribute('type', 'submit')
+    // expect(button).not.toHaveAttribute('type', 'button')
+
+    // expect(button).toHaveAttribute('type', expect.stringContaining('sub'))
+    // expect(button).toHaveAttribute('type', expect.not.stringContaining('but'))
+
 })
 //order of queries
 // getByRole
