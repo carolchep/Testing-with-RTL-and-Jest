@@ -61,6 +61,17 @@ export const Application = () => {
       <form data-testid="invalid-form">
         <input required />
       </form>
+
+      <input data-testid="required-input" required />
+      <input data-testid="aria-required-input" aria-required="true" />
+      <input data-testid="conflicted-input" required aria-required="false" />
+      <input data-testid="aria-not-required-input" aria-required="false" />
+      <input data-testid="optional-input" />
+      <input data-testid="unsupported-type" type="image" required />
+      <select data-testid="select" required></select>
+      <textarea data-testid="textarea" required></textarea>
+      {/* <div data-testid="supported-role" role="tree" required></div> */}
+      <div data-testid="supported-role-aria" role="tree" aria-required="true"></div>
     </>
   )
 }
