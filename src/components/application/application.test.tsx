@@ -119,6 +119,18 @@ test('to be visible', () => {
 
     expect(button).toHaveAttribute('type', expect.stringContaining('sub'))
     expect(button).toHaveAttribute('type', expect.not.stringContaining('but'))
+    const deleteButton = screen.getByTestId('delete-button')
+    const noClasses = screen.getByTestId('no-classes')
+
+    expect(deleteButton).toHaveClass('extra')
+    expect(deleteButton).toHaveClass('btn-danger btn')
+    expect(deleteButton).toHaveClass('btn-danger', 'btn')
+    expect(deleteButton).not.toHaveClass('btn-link')
+
+    expect(deleteButton).toHaveClass('btn-danger extra btn', { exact: true }) // to check if the element has EXACTLY a set of classes
+    expect(deleteButton).not.toHaveClass('btn-danger extra', { exact: true }) // if it has more than expected it is going to fail
+
+    expect(noClasses).not.toHaveClass()
 
 })
 //order of queries

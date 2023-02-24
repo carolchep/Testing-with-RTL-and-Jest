@@ -92,6 +92,11 @@ export const Application = () => {
         <div>Visible Details Example</div>
       </details>
       <button data-testid="ok-button" type="submit" disabled>ok</button>
+
+      <button data-testid="delete-button" className="btn extra btn-danger">
+        Delete item
+      </button>
+      <button data-testid="no-classes">No Classes</button>
     </>
   )
 }
