@@ -138,6 +138,10 @@ test('to be visible', () => {
 
     input.blur()
     expect(input).not.toHaveFocus()
+    expect(screen.getByTestId('login-form')).toHaveFormValues({
+        username: 'jane.doe',
+        rememberMe: true,
+      })
 
 })
 //order of queries
