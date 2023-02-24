@@ -44,6 +44,11 @@ export const Application = () => {
         </form>
 <fieldset disabled><input type="text" data-testid="input" /></fieldset>
 {/* <a href="www.kkkd.com" disabled>link</a> */}
+<span data-testid="not-empty"><span data-testid="empty"></span></span>
+<span data-testid="with-whitespace"> </span>
+<span data-testid="with-comment">
+   {/* comment  */}
+</span>
       </>
     )
   }

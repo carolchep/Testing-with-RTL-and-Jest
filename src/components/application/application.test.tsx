@@ -80,6 +80,9 @@ describe('getBylabelText', () => {
         render(<Application/>)
         expect(screen.getByRole('button')).toBeDisabled()
          expect(screen.getByTestId('input')).toBeDisabled()
+         expect(screen.getByTestId('empty')).toBeEmptyDOMElement()
+       expect(screen.getByTestId('not-empty')).not.toBeEmptyDOMElement()
+        expect(screen.getByTestId('with-whitespace')).not.toBeEmptyDOMElement()
     })
 })
 //order of queries
