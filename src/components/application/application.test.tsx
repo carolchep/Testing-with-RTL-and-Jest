@@ -149,14 +149,14 @@ test('to be visible', () => {
     expect(element).toHaveTextContent(/content$/i) // to use case-insensitive match
     expect(element).not.toHaveTextContent('content')
     const textInput = screen.getByTestId('input-text')
-const numberInput = screen.getByTestId('input-number')
-const emptyInput =screen. getByTestId('input-empty')
-const selectInput = screen.getByTestId('select-number')
+    const numberInput = screen.getByTestId('input-number')
+    const emptyInput = screen.getByTestId('input-empty')
+    const selectInput = screen.getByTestId('select-number')
 
-expect(textInput).toHaveValue('text')
-expect(numberInput).toHaveValue(5)
-expect(emptyInput).not.toHaveValue()
-expect(selectInput).toHaveValue(['second', 'third'])
+    expect(textInput).toHaveValue('text')
+    expect(numberInput).toHaveValue(5)
+    expect(emptyInput).not.toHaveValue()
+    expect(selectInput).toHaveValue(['second', 'third'])
 })
 //order of queries
 // getByRole

@@ -118,6 +118,8 @@ export const Application = () => {
         <option value="second" selected>Second Value</option>
         <option value="third" selected>Third Value</option>
       </select>
+
+      
     </>
   )
 }
