@@ -76,13 +76,20 @@ describe('getBylabelText', () => {
         const testId = screen.getByTestId("custom-element")
         expect(testId).toBeInTheDocument()
     })
-    test('toBeEnabled',()=>{
-        render(<Application/>)
+    test('toBeEnabled', () => {
+        render(<Application />)
         expect(screen.getByRole('button')).toBeDisabled()
-         expect(screen.getByTestId('input')).toBeDisabled()
-         expect(screen.getByTestId('empty')).toBeEmptyDOMElement()
-       expect(screen.getByTestId('not-empty')).not.toBeEmptyDOMElement()
+        expect(screen.getByTestId('input')).toBeDisabled()
+        expect(screen.getByTestId('empty')).toBeEmptyDOMElement()
+        expect(screen.getByTestId('not-empty')).not.toBeEmptyDOMElement()
         expect(screen.getByTestId('with-whitespace')).not.toBeEmptyDOMElement()
+        expect(screen.getByTestId('no-aria-invalid')).not.toBeInvalid()
+        expect(screen.getByTestId('aria-invalid')).toBeInvalid()
+        expect(screen.getByTestId('aria-invalid-value')).toBeInvalid()
+        expect(screen.getByTestId('aria-invalid-false')).not.toBeInvalid()
+
+        expect(screen.getByTestId('valid-form')).not.toBeInvalid()
+        expect(screen.getByTestId('invalid-form')).toBeInvalid()
     })
 })
 //order of queries
