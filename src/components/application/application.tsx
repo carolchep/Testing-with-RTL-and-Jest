@@ -40,7 +40,10 @@ export const Application = () => {
             </label>
           </div>
           <button disabled>Submit</button>
+          
         </form>
+<fieldset disabled><input type="text" data-testid="input" /></fieldset>
+{/* <a href="www.kkkd.com" disabled>link</a> */}
       </>
     )
   }

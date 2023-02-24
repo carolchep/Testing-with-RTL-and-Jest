@@ -76,6 +76,11 @@ describe('getBylabelText', () => {
         const testId = screen.getByTestId("custom-element")
         expect(testId).toBeInTheDocument()
     })
+    test('toBeEnabled',()=>{
+        render(<Application/>)
+        expect(screen.getByRole('button')).toBeDisabled()
+         expect(screen.getByTestId('input')).toBeDisabled()
+    })
 })
 //order of queries
 // getByRole
