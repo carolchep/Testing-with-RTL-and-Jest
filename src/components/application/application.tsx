@@ -109,6 +109,15 @@ export const Application = () => {
         <button type="submit">Sign in</button>
       </form>
       <span data-testid="text-content">Text Content</span>
+
+      <input type="text" value="text" data-testid="input-text" onChange={() => { }} />
+      <input type="number" value="5" data-testid="input-number" onChange={() => { }}/>
+      <input type="text" data-testid="input-empty" onChange={() => { }}/>
+      <select multiple data-testid="select-number"onChange={() => { }}>
+        <option value="first" onChange={() => { }}>First Value</option>
+        <option value="second" selected>Second Value</option>
+        <option value="third" selected>Third Value</option>
+      </select>
     </>
   )
 }

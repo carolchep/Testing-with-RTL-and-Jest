@@ -141,14 +141,22 @@ test('to be visible', () => {
     expect(screen.getByTestId('login-form')).toHaveFormValues({
         username: 'jane.doe',
         rememberMe: true,
-      })
-      const element = screen.getByTestId('text-content')
+    })
+    const element = screen.getByTestId('text-content')
 
-expect(element).toHaveTextContent('Content')
-expect(element).toHaveTextContent(/^Text Content$/) // to match the whole content
-expect(element).toHaveTextContent(/content$/i) // to use case-insensitive match
-expect(element).not.toHaveTextContent('content')
+    expect(element).toHaveTextContent('Content')
+    expect(element).toHaveTextContent(/^Text Content$/) // to match the whole content
+    expect(element).toHaveTextContent(/content$/i) // to use case-insensitive match
+    expect(element).not.toHaveTextContent('content')
+    const textInput = screen.getByTestId('input-text')
+const numberInput = screen.getByTestId('input-number')
+const emptyInput =screen. getByTestId('input-empty')
+const selectInput = screen.getByTestId('select-number')
 
+expect(textInput).toHaveValue('text')
+expect(numberInput).toHaveValue(5)
+expect(emptyInput).not.toHaveValue()
+expect(selectInput).toHaveValue(['second', 'third'])
 })
 //order of queries
 // getByRole
