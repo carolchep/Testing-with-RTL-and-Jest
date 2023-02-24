@@ -131,6 +131,13 @@ test('to be visible', () => {
     expect(deleteButton).not.toHaveClass('btn-danger extra', { exact: true }) // if it has more than expected it is going to fail
 
     expect(noClasses).not.toHaveClass()
+    const input = screen.getByTestId('element-to-focus')
+
+    input.focus()
+    expect(input).toHaveFocus()
+
+    input.blur()
+    expect(input).not.toHaveFocus()
 
 })
 //order of queries

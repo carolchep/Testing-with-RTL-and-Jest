@@ -97,6 +97,7 @@ export const Application = () => {
         Delete item
       </button>
       <button data-testid="no-classes">No Classes</button>
+      <div><input type="text" data-testid="element-to-focus" /></div>
     </>
   )
 }
