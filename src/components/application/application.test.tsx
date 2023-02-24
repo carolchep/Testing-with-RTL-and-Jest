@@ -111,14 +111,14 @@ test('to be visible', () => {
     expect(screen.getByText('Hidden Attribute Example')).not.toBeVisible()
     expect(screen.getByText('Hidden Details Example')).not.toBeVisible()
     expect(screen.getByText('Visible Details Example')).toBeVisible()
-    // const button = screen.getByTestId('ok-button')
+    const button = screen.getByTestId('ok-button')
 
-    // expect(button).toHaveAttribute('disabled')
-    // expect(button).toHaveAttribute('type', 'submit')
-    // expect(button).not.toHaveAttribute('type', 'button')
+    expect(button).toHaveAttribute('disabled')
+    expect(button).toHaveAttribute('type', 'submit')
+    expect(button).not.toHaveAttribute('type', 'button')
 
-    // expect(button).toHaveAttribute('type', expect.stringContaining('sub'))
-    // expect(button).toHaveAttribute('type', expect.not.stringContaining('but'))
+    expect(button).toHaveAttribute('type', expect.stringContaining('sub'))
+    expect(button).toHaveAttribute('type', expect.not.stringContaining('but'))
 
 })
 //order of queries
